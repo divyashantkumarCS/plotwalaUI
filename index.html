@@ -8,6 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -49,59 +50,86 @@
     <main>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-1">
-                    <button type="button" class="btn btn-info" style="width: 100%;">Filter</button>
-                </div>
-                <div class="col-8">
-                    <div class="card mb-3 rounded-0" style="max-width: 800px;">
-                        <div class="row g-0">
-                          <div class="col-md-5" style="height:270px; position: relative;" >
-                            <img src="assets/images/sieuwert-otterloo-aren8nutd1Q-unsplash (1).jpg" width="100%" height="100%" style="object-fit: cover;" alt="...">
-                            <div class="imgText-overlay">
-                                <button type="button" class=" btn btn-success rounded-0 p-0 px-3 py-1" style="position: absolute; top: 10px; left: 10px;"><b>Featured</b></button>
-                                <button type="button" class=" btn btn-danger rounded-0 p-0 px-3 py-1" style="position: absolute; top: 10px; right: 10px;"><b>For Sale</b></button>
-                                <button type="button" class=" btn btn-primary rounded-0 p-0 px-3 py-1" style="position: absolute; bottom: 10px; left: 10px;"><b>Family Home</b></button>
-
-                            </div>
-                          </div>
-                          <div class="col-md-7 ">
-                            <div class="card-body">
-                                <h5 class="card-title pb-2">Real House Luxury Villa</h5>
-                                <div class="card-subtitle pb-md-4" style="font-size: 14px; color:grey;">
-                                    <i class="fa-solid fa-location-dot pe-1" style="color: #1ce4f2;"></i> Next To Fame Diagnostics - RK Hegde Nagar, Bangalore - 560077
-                                </div>
-                              
-                                <div class="row g-0">
-                                    <div class="col-5 pb-3" style="color: grey;">
-                                        <i class="fa-solid fa-bed"></i>&nbsp; Bedrooms
-                                    </div>
-                                    <div class="col-5 pb-3" style="color: grey;">
-                                        <i class="fa-solid fa-toilet"></i>&nbsp; Bathrooms
-                                    </div>
-                                    <div class="col-5 pb-3" style="color: grey;">
-                                        <i class="fa-solid fa-toilet"></i>&nbsp; 720sq ft
-                                    </div>
-                                    <div class="col-5 pb-3" style="color: grey;">
-                                        <i class="fa-solid fa-car"></i>&nbsp; Garages
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-4">
-                                        $ 2300000
-                                    </div>
-                                    <div class="col-4"></div>
-                                </div>
-                              
-                              <!-- <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p> -->
-                            </div>
-                          </div>
-                        </div>
+                <div class="col-2">
+                    <button class="btn btn-info" style="width: 100%;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">FILTER
+                    </button>
+                    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" >
+                      <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                      </div>
+                      <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                          </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Dropdown
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li>
+                                <hr class="dropdown-divider">
+                              </li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <!-- <form class="d-flex mt-3" role="search">
+                          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                          <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form> -->
+                      </div>
                     </div>
                 </div>
-                <div class="col-3">
-
+                <div class="col-8 cardContaier">
+                </div>
+                <div class="col-2">
+                  
                 </div>
             </div>
+        </div>
+        <div>
+          <!-- Button trigger modal -->
+          <i class="fa-solid fa-comment-dots chatIcon" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+
+          <!-- Modal -->
+          <form>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content p-3">
+                  <div class="modal-header" style="border: none !important;">
+                    <h1 class="modal-title" style="font-size: 40px;" id="exampleModalLabel">Connect Us</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Name :</label>
+                      <input type="password" class="form-control" id="name">
+                    </div>
+                    <div class="mb-3">
+                      <label for="email" class="form-label">Email :</label>
+                      <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                      <label for="mobile" class="form-label">Mobile :</label>
+                      <input type="email" class="form-control" id="mobile" aria-describedby="emailHelp">
+                    </div>
+                  </div>
+                  <div class="modal-footer" style="border: none !important;">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
     </main>
     

@@ -2,3 +2,41 @@
     margin: 0;
     padding: 0;
 }
+.cardContaier{
+    display: flex;
+    flex-direction: column;
+}
+
+.imgDetailsSec3{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.imgDetailsSec3-one{
+    font-size: 19px;
+    font-weight: 500;
+    color: grey;
+    width: 70%;
+}
+
+.imgDetailsSec3-two{
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    padding-right: 20px;
+}
+
+
+.imgDetailsSec3-two > a{
+    text-decoration: none;
+    color: grey;
+}
+
+.chatIcon{
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    font-size: 45px;
+    color: rgb(0, 119, 255);
+}
